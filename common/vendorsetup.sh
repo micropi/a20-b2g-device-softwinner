@@ -63,9 +63,9 @@ function pack()
 {
 	T=$(gettop)
 	export ANDROID_IMAGE_OUT=$OUT
-	export PACKAGE=$T/../lichee/tools/pack
+	export PACKAGE=$T/lichee_tools/pack
 
-	sh $DEVICE/package.sh $1
+	sh ${DEVICE_PATH}/package.sh $1
 }
 
 function exdroid_diff()
