@@ -38,7 +38,7 @@ PRODUCT_COPY_FILES += \
 	device/softwinner/fire-micropi/tp.idc:system/usr/idc/tp.idc \
 	device/softwinner/fire-micropi/gsensor.cfg:system/usr/gsensor.cfg
 
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 	device/softwinner/fire-micropi/initlogo.rle:root/initlogo.rle
 
 PRODUCT_COPY_FILES += \
