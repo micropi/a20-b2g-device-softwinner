@@ -4,7 +4,7 @@ $(call inherit-product, device/softwinner/wing-common/ProductCommon.mk)
 
 DEVICE_PACKAGE_OVERLAYS := device/softwinner/fire-micropi/overlay
 
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 	device/softwinner/fire-micropi/modules/modules/nand.ko:root/nand.ko \
 	device/softwinner/fire-micropi/modules/modules/sun7i-ir.ko:root/sun7i-ir.ko \
 	#device/softwinner/fire-micropi/modules/modules/disp.ko:root/disp.ko \
@@ -12,7 +12,6 @@ PRODUCT_COPY_FILES += \
 	#device/softwinner/fire-micropi/modules/modules/hdmi.ko:root/hdmi.ko \
 
 PRODUCT_COPY_FILES += \
-	device/softwinner/fire-micropi/kernel:kernel \
 	device/softwinner/fire-micropi/recovery.fstab:recovery.fstab \
 	frameworks/base/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
 

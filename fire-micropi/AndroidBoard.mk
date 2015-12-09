@@ -9,4 +9,8 @@ ifeq ($(TARGET_PREBUILT_KERNEL),)
 $(warning using prebuilt kernel: $(TARGET_PREBUILT_KERNEL))
 endif
 
+$(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP)
+	$(transform-prebuilt-to-target)
 
+################################################################
+-include u-boot/AndroidBootloader.mk
