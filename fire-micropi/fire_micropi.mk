@@ -114,7 +114,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.ui.hw=true \
     persist.sys.device_name = MiniMax 
 
-$(call inherit-product-if-exists, device/softwinner/fire-micropi/modules/modules.mk)
+#$(call inherit-product-if-exists, device/softwinner/fire-micropi/modules/modules.mk)
 
 PRODUCT_CHARACTERISTICS := manu
 

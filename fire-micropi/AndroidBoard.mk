@@ -11,6 +11,7 @@ endif
 
 $(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP)
 	$(transform-prebuilt-to-target)
+	cp -r device/softwinner/fire-micropi/modules/modules/* $(TARGET_OUT_VENDOR)/modules/
 
 ################################################################
 -include u-boot/AndroidBootloader.mk
