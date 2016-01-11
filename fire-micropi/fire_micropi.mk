@@ -12,12 +12,11 @@ DEVICE_PACKAGE_OVERLAYS := device/softwinner/fire-micropi/overlay
 	#device/softwinner/fire-micropi/modules/modules/hdmi.ko:root/hdmi.ko \
 
 PRODUCT_COPY_FILES += \
-	device/softwinner/fire-micropi/recovery.fstab:recovery.fstab \
-	frameworks/base/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
+	device/softwinner/fire-micropi/recovery.fstab:recovery.fstab
+#	frameworks/base/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
 
 PRODUCT_COPY_FILES += \
 	device/softwinner/fire-micropi/ueventd.sun7i.rc:root/ueventd.sun7i.rc \
-	device/softwinner/fire-micropi/ct-test.apk:system/app/ct-test.apk \
 	device/softwinner/fire-micropi/init.sun7i.rc:root/init.sun7i.rc \
 	device/softwinner/fire-micropi/init.sun7i.usb.rc:root/init.sun7i.usb.rc \
 	device/softwinner/fire-micropi/init/init.sda.rc:root/init.sda.rc \
@@ -28,8 +27,7 @@ PRODUCT_COPY_FILES += \
 	device/softwinner/fire-micropi/init.recovery.sun7i.rc:root/init.recovery.sun7i.rc \
 	device/softwinner/fire-micropi/needfix.rle:root/needfix.rle \
 	device/softwinner/fire-micropi/camera.cfg:system/etc/camera.cfg \
-	device/softwinner/fire-micropi/media_profiles.xml:system/etc/media_profiles.xml \
-	frameworks/native/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml
+	device/softwinner/fire-micropi/media_profiles.xml:system/etc/media_profiles.xml
 
 #input device config
 PRODUCT_COPY_FILES += \
@@ -45,16 +43,15 @@ PRODUCT_COPY_FILES += \
 	device/softwinner/fire-micropi/vold.fstab:system/etc/vold.fstab
 	
 PRODUCT_PACKAGES += \
-	TvdLauncher \
 	Bluetooth
 #	TSCalibration2
 
 # wifi & bt config file
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
-    frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
-    system/bluetooth/data/main.nonsmartphone.conf:system/etc/bluetooth/main.conf
+     system/bluetooth/data/main.nonsmartphone.conf:system/etc/bluetooth/main.conf
+#    frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+#    frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
+#    frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
 
 # rtl8723as bt fw and config
 #PRODUCT_COPY_FILES += \

@@ -29,8 +29,8 @@ SW_BOARD_IR_RECOVERY := true
 # wifi and bt configuration
 
 # 1. Wifi Configuration
-#BOARD_WIFI_VENDOR := realtek
-BOARD_WIFI_VENDOR := broadcom
+BOARD_WIFI_VENDOR := realtek
+#BOARD_WIFI_VENDOR := broadcom
 
 # 1.1 realtek wifi support
 ifeq ($(BOARD_WIFI_VENDOR), realtek)
@@ -43,8 +43,8 @@ ifeq ($(BOARD_WIFI_VENDOR), realtek)
     #SW_BOARD_USR_WIFI := rtl8192cu
     #BOARD_WLAN_DEVICE := rtl8192cu
 
-    #SW_BOARD_USR_WIFI := rtl8188eu
-    #BOARD_WLAN_DEVICE := rtl8188eu
+    SW_BOARD_USR_WIFI := rtl8188eu
+    BOARD_WLAN_DEVICE := rtl8188eu
 
     #SW_BOARD_USR_WIFI := rtl8189es
     #BOARD_WLAN_DEVICE := rtl8189es
@@ -54,6 +54,16 @@ ifeq ($(BOARD_WIFI_VENDOR), realtek)
 
     #SW_BOARD_USR_WIFI := rtl8723au
     #BOARD_WLAN_DEVICE := rtl8723au
+
+    WIFI_DRIVER_MODULE_NAME := "8188eu"
+    WIFI_DRIVER_MODULE_PATH := "/system/vendor/modules/8188eu.ko"
+    WIFI_DRIVER_MODULE_ARG  := "ifname=wlan0 if2name=p2p0"
+
+    WIFI_FIRMWARE_LOADER       := ""
+    WIFI_DRIVER_FW_PATH_STA    := ""
+    WIFI_DRIVER_FW_PATH_P2P    := ""
+    WIFI_DRIVER_FW_PATH_PARAM  := ""
+    WIFI_DRIVER_FW_PATH_AP     := ""
 endif
 
 # 1.2 broadcom wifi support
@@ -84,11 +94,11 @@ endif
 
 # 2. Bluetooth Configuration
 # make sure BOARD_HAVE_BLUETOOTH is true for every bt vendor
-BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_BCM := true
+BOARD_HAVE_BLUETOOTH := false
+BOARD_HAVE_BLUETOOTH_BCM := false
 #SW_BOARD_HAVE_BLUETOOTH_RTK := true
 #SW_BOARD_HAVE_BLUETOOTH_NAME := bcm40183
-SW_BOARD_HAVE_BLUETOOTH_NAME := ap6210
+#SW_BOARD_HAVE_BLUETOOTH_NAME := ap6210
 
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/softwinner/fire-micropi/bluetooth/
+#BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/softwinner/fire-micropi/bluetooth/
 

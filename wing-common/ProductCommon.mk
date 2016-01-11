@@ -39,7 +39,6 @@ PRODUCT_PACKAGES += \
 	libsunxi_alloc \
 	Camera \
 	libjni_mosaic \
-	u3gmonitor \
 	rild \
 	chat \
 	libjni_pinyinime \
@@ -98,7 +97,7 @@ PRODUCT_COPY_FILES += \
         device/softwinner/wing-common/CedarX-Crack/libswa2.so:system/lib/libswa2.so
 
 #premission feature
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     device/softwinner/wing-common/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.location.xml:system/etc/permissions/android.hardware.location.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
@@ -110,10 +109,10 @@ PRODUCT_COPY_FILES += \
 #    frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml
 
 # for sop
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     device/softwinner/wing-common/sop.sh:/system/bin/sop.sh
 
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 	device/softwinner/wing-common/media_codecs.xml:system/etc/media_codecs.xml \
 	device/softwinner/wing-common/preinstall.sh:/system/bin/preinstall.sh \
 	device/softwinner/wing-common/sensors.sh:/system/bin/sensors.sh \
@@ -149,7 +148,7 @@ PRODUCT_PACKAGES += \
     libdrmdecrypt	
 	
 # pre-installed apks
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*.apk,$(LOCAL_PATH)/preinstallapk,system/preinstall) \
 	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/apk,system/app) \
 	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/apklib,system/lib) \
@@ -171,19 +170,19 @@ PRODUCT_COPY_FILES += \
 	external/ppp/pppoe/script/pppoe-disconnect:system/bin/pppoe-disconnect
 
 #securefile
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     securefileserver \
     libsecurefileservice \
 	libsecurefile_jni
 
 #isomount
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
 	isomountmanagerservice \
 	libisomountmanager_jni \
 	libisomountmanagerservice
 
 #gpio
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
 	gpioservice \
 	libgpio_jni \
 	libgpioservice \
@@ -193,7 +192,7 @@ PRODUCT_PACKAGES += \
 	libsystemmixservice
 
 #FireAir 2.0
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     libupdatesoftwinner.so \
     updatesoftwinner \
     libsoftwinner_servers.so \
